@@ -56,6 +56,7 @@
       font-weight: bold;
       color: white;
       text-decoration: none;
+      flex-shrink: 0;
     }
 
     .nav-logo-icon {
@@ -77,6 +78,7 @@
       flex: 1;
       justify-content: flex-end;
       margin-left: 10px;
+      min-width: 0;
     }
 
     .nav-links::-webkit-scrollbar {
@@ -100,9 +102,19 @@
     }
 
     @media (max-width: 400px) {
+      .navbar {
+        padding: 12px 12px;
+      }
+      .nav-logo {
+        gap: 6px;
+      }
+      .nav-links {
+        gap: 1px;
+        margin-left: 6px;
+      }
       .nav-links li a {
         font-size: 11px;
-        padding: 4px 6px;
+        padding: 4px 5px;
       }
     }
 
