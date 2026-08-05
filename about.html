@@ -69,23 +69,41 @@
 
     .nav-links {
       display: flex;
-      gap: 4px;
+      gap: 2px;
       list-style: none;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      flex: 1;
+      justify-content: flex-end;
+      margin-left: 10px;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
     }
 
     .nav-links li a {
       color: var(--文字-灰色);
       text-decoration: none;
-      font-size: 13px;
-      padding: 6px 10px;
+      font-size: 12px;
+      padding: 5px 8px;
       border-radius: 20px;
       transition: all 0.3s;
+      white-space: nowrap;
     }
 
     .nav-links li a:hover,
     .nav-links li a.active {
       background: rgba(255,255,255,0.15);
       color: var(--文字-白色);
+    }
+
+    @media (max-width: 400px) {
+      .nav-links li a {
+        font-size: 11px;
+        padding: 4px 6px;
+      }
     }
 
     /* 页面标题区 */
